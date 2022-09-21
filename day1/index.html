@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sign Up</h1>
+      <form>
+        <div class="form-row form-row--flex form-row--2-col">
+            <input type="text" name="firstName" placeholder="First Name" />
+            <input type="text" name="lastName" placeholder="Last Name" />
+        </div>
+        
+        <div class="form-row form-row--flex">
+            <input type="tel" name="telephone" placeholder="Mobile No." />
+        </div>
+        
+        <div class="form-row form-row--flex"><input type="email" name="email" placeholder="Email Address" /></div>
+        
+        <div class="form-row form-row--flex form-row--2-col">
+            <input type="password" name="password" placeholder="Password" />
+            <input
+            type="password"
+            name="passwordConfirm"
+            placeholder="Confirm Password"
+            />
+        </div>
+
+        <div class="form-row">
+            <input type="checkbox" name="terms"/>I Agree
+            <p>By clicking <strong>I Agree</strong>, you agree to <a href="#">Terms and Conditions</a> set out by the site, including our Cookie Use.</p>
+        </div>
+
+        <div class="form-row form-row--flex form-row--2-col">
+            <input type="submit" value="Register">
+            <input type="submit" value="Sign In">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
