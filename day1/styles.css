@@ -30,7 +30,16 @@
 }
 
 .form-row input {
+    padding: 5px 5px;
+    box-sizing: border-box;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
     flex: 1;
+}
+
+.form-row input:focus {
+    border: 1px solid skyblue;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
 }
 
 .form-row--2-col {
@@ -42,3 +51,38 @@
     flex-basis: 45%;
 }
 
+.form-row p {
+    margin-top: 5px;
+}
+
+#register-text {
+    padding: 1px 8px 3px 8px;
+    font-size: 0.8em;
+    color: white;
+    background-color: #4287f5;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.form-row input[type="submit"] {
+    padding: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid;
+    border-radius: 8px;
+    outline: none;
+}
+
+#register {
+    color: white;
+    background-color: #4287f5;
+}
+
+#signin {
+    color: white;
+    background-color: green;
+}
+
+.form-row input[type="submit"]:hover {
+    cursor: pointer;
+}
