@@ -51,8 +51,19 @@
     flex-basis: 45%;
 }
 
-.form-row p {
-    margin-top: 5px;
+.form-row--4-col {
+    justify-content: space-between;
+}
+
+.form-row--4-col label {
+    flex: 0;
+    flex-basis: 20%;
+    align-self: center;
+}
+
+.form-row--4-col p {
+    flex: 0;
+    flex-basis: 66%;
 }
 
 #register-text {
