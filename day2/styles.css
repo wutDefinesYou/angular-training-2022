@@ -1,0 +1,155 @@
+body {
+    background-color: black;
+    color: aliceblue; 
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0;
+}
+
+.container {
+    padding: 70px 45px;
+    border-bottom: 8px solid #222;
+}
+
+.animation-card {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.animation-card--text-container {
+    flex: 0 1 auto;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 60%;
+}
+
+.animation-card--heading {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.animation-card--subtitle {
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+.animation-card--media-container {
+    position: relative;
+}
+
+.animation-card--image {
+    position: relative;
+    margin: -10% -5% -5% 5%;
+    height: auto;
+    width: 90%;
+    z-index: 2;
+}
+
+.push-left {
+    transform: translateX(-20%);
+}
+
+.animation-card--video-container {
+    height: 100%;
+    width: 100%;
+    max-height: 70%;
+    max-width: auto;
+    position: absolute;
+    top: 22px;
+    left: -1.5px;
+}
+
+.animation-card--video {
+    height: 100%;
+    width: 100%;
+}
+
+.flex-end {
+    order: 2;
+}
+
+.flex-start {
+    order: 1;
+}
+
+.downloader-container {
+    position: relative;
+    height: 60px;
+    width: 250px;
+    transform: translate(15%, -100%);
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.downloader-thumbnail {
+    flex: 0 1 20%;
+    height: 100%;
+    width: 100%;
+}
+
+.download-icon {
+    flex: 0 1 20%;
+    height: 80%;
+    width: auto;
+}
+
+.downloader-text {
+    flex: 3 1 60%;
+    padding: 20px 20px 10px 10px;
+}
+
+.text-0 {
+    font-weight: 600;
+    position: relative;
+    top: 7px;
+}
+
+.text-1 {
+    font-size: .9em;
+    font-weight: 400;
+    color: #0071eb;
+    position: relative;
+    top: -10px;
+}
+
+.video-container-extra {
+    max-height: 60%;
+    top: 0px;
+}
+
+@media (max-width: 760px) {
+    .animation-card {
+        flex-direction: column;
+        column-gap: 20px;
+    }
+
+    .animation-card--text-container {
+        padding: 0;
+        margin-bottom: 60px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .flex-end {
+        order: 1;
+    }
+
+    .flex-start {
+        order: 2;
+    }
+
+    .push-left {
+        transform: translateX(0);
+    }
+
+    .downloader-container {
+        transform: translate(65%, -100%);
+    }
+}
