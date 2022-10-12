@@ -1,0 +1,17 @@
+<h1 [ngStyle]="{'color': currentTheme}">This is the Title</h1>
+<ul [ngClass]="'card-container'">
+  <li 
+    [ngClass]="'card-item'" 
+    [ngStyle]="
+        currentTheme === card.color
+        && init === false
+        && {'border': 'solid 2px ' + card.color} 
+        || null
+    "
+    *ngFor="let card of cards"
+    >
+    <h2>{{ card.title }}</h2>
+    <p>{{ card.text }}</p>
+    <button [ngStyle]="{'background-color': card.color}" (click)="changeTheme(card.color)">push me</button>
+  </li>
+</ul>

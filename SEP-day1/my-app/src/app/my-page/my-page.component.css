@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+.card-container {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-item {
+    flex: 100%;
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.card-item > button {
+    color: aliceblue;
+}
+
+@media (min-width: 768px) {
+    .card-item {
+        flex-basis: 45%;
+        max-width: 45%;
+    }
+}
