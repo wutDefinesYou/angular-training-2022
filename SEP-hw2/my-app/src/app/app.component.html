@@ -1,0 +1,19 @@
+<h1><strong>{{ title }}</strong></h1>
+<label for="search">Search First Name</label>
+<input type="text" name="search" [(ngModel)]="keyword">
+<table>
+  <thead>
+    <tr>
+      <td *ngFor="let kv of users[0] | keyvalue: orderOriginal"><strong>{{ kv.key | titlecase }}</strong></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users | filterSearch: keyword | sortByAlpha">
+      <td *ngFor="let kv of user | keyvalue: orderOriginal; last as isLast">
+        <span *ngIf="!isLast; else elseBlock">{{ kv.value }}</span>
+        <ng-template #elseBlock>{{ kv.value | date:'shortDate' }}</ng-template>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="reset()">Reset</button>
