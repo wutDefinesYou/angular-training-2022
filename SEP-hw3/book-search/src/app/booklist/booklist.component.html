@@ -1,0 +1,13 @@
+<mat-card 
+    *ngFor="let book of bookSearch.booksObs$ | async"
+    [class]="'card'"
+    (click)="bookSearch.addToWishlist(book.bookname)"
+    >
+    <img [src]="book.bookpic" alt="" mat-card-md-image>
+    <mat-card-content>
+        <mat-card-title>{{ book.bookname }}</mat-card-title>
+        <p>{{ book.publisher }}</p>
+        <p>{{ book.publishdate }}</p>
+        <p>{{ book.description }}</p>
+    </mat-card-content>
+</mat-card>
