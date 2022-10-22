@@ -1,0 +1,24 @@
+<div class="pokemon-list" *ngIf="!anyPokemonChose else elseblock">
+  <mat-card *ngFor="let pokemon of pokemons" (click)="openDialog(pokemon)">
+    <div>
+      <img
+        mat-card-xl-image
+        [src]="pokemon.sprites.other['official-artwork'].front_default"
+        [alt]="pokemon.name"
+      />
+    </div>
+    <mat-card-content>
+      <mat-card-title>{{ pokemon.name }}</mat-card-title>
+      <p>#{{ pokemon.id }}</p>
+      <ul>
+        <li *ngFor="let type of pokemon.types">{{ type.type.name }}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>
+<ng-template #elseblock>
+    <div class="center">
+        <img [src]="pokemonChosen.sprites.other.dream_world.front_default" [alt]="pokemonChosen.name">
+        <p>{{ pokemonChosen.name }}, I choose you!</p>
+    </div>
+</ng-template>

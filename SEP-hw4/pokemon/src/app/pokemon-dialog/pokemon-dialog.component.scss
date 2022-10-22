@@ -1,0 +1,14 @@
+div {
+    text-align: center;
+}
+
+div > img {
+    display: block;
+    margin: 0 auto 0;
+}
+
+div > button {
+    display: block;
+    margin: auto;
+    border: solid 1px black;
+}
