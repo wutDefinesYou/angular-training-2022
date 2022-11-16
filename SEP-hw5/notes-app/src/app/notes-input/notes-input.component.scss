@@ -1,0 +1,17 @@
+form {
+    width: 50%;
+    margin: 0 auto 0;
+
+    mat-form-field {
+        display: block;
+    }
+
+    div {
+        width: fit-content;
+        margin-left: auto;
+
+        button:first-child {
+            margin-right: 15px;
+        }
+    }
+}
