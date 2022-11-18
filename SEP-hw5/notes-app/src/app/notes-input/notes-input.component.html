@@ -11,7 +11,7 @@
         <button mat-raised-button (click)="reset()">Reset</button>
         <button *ngIf="!isOnEdit; else displayUpdate" #toggleBtn mat-raised-button (click)="addNote(form.value)">Add</button>
         <ng-template #displayUpdate>
-            <button #toggleBtn mat-raised-button (click)="update(oldID, form.value)">Update</button>
+            <button mat-raised-button (click)="update(oldID, form.value)">Update</button>
         </ng-template>
     </div>
 </form>

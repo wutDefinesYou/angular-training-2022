@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms'
 import { Note } from '../interfaces/note'
 import { NotesService } from '../services/notes.service'
 import { v4 as uuidv4 } from 'uuid';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-notes-input',
@@ -11,9 +12,9 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class NotesInputComponent implements OnInit {
   form!: FormGroup
-  @ViewChild('toggleBtn', {static: true, read: ElementRef}) toggleBtn!: ElementRef
   isOnEdit: boolean = false
-  oldID!: string | number 
+  oldID!: string | number
+  subscription$!: Subscription
 
   constructor(
     private formBuilder: FormBuilder,
@@ -23,6 +24,10 @@ export class NotesInputComponent implements OnInit {
   ngOnInit(): void {
     this.buildForm()
     this.onEdit()
+  }
+
+  ngOnDestroy(): void {
+    this.subscription$.unsubscribe()
   }
 
   buildForm() {
@@ -50,7 +55,7 @@ export class NotesInputComponent implements OnInit {
   }
 
   onEdit() {
-    this.notesService.curNote$.subscribe(note => {
+    this.subscription$ = this.notesService.curNote$.subscribe(note => {
       if (note && note.id) {
         this.form.setValue({
           title: note.title,
