@@ -9,3 +9,4 @@ SEP-hw2: Employee search with pipes.<br>
 SEP-hw3: Book Search app.<br>
 SEP-hw4: Display Pokemons.<br>
 SEP-hw5: Notes app.<br>
+SEP-hw6: Expandable tree.<br>
