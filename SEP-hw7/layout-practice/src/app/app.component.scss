@@ -67,6 +67,7 @@
                 @include flex-basic();
 
                 padding: 0;
+                flex-wrap: wrap;
                 
                 > * {
                     flex: 1 0 auto;
