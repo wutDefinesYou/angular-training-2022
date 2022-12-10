@@ -1,0 +1,21 @@
+<div class="background">
+  <div class="wrapper">
+
+    <section>
+      <div class="left-col">
+        <header><h1>List</h1></header>
+        <app-card *ngFor="let card of cards" [card]="card" [curCard]="curCard" (click)="curCard = card"></app-card>
+      </div>
+
+      <div class="right-col">
+        <div *ngIf="curCard else blank">
+          <h1>{{ curCard.title }}</h1>
+          <p>{{ curCard.description }}</p>
+          <button>Save</button>
+        </div>
+        <ng-template #blank></ng-template>
+      </div>
+    </section>
+    
+  </div>
+</div>

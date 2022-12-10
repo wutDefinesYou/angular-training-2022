@@ -1,0 +1,7 @@
+<div class="flex-wrapper" [class.clicked]="curCard && curCard.title === card.title">
+    <div class="color-block" style="--card-color: {{ card.color }}">&nbsp;</div>
+    <div class="content">
+        <h2>{{ card.title }}</h2>
+        <p>{{ card.description | slice:0:200 }}...</p>
+    </div>
+</div>

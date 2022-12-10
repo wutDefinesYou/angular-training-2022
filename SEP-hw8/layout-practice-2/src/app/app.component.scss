@@ -1,0 +1,57 @@
+$base-color: #808080;
+
+.background {
+    width: auto;
+    height: auto;
+    padding: 10px 0;
+    background-color: $base-color;
+}
+
+.wrapper {
+    width: 85%;
+    height: fit-content;
+    margin: 0 auto 0;
+    background-color: ivory;
+}
+
+section {
+    display: flex;
+
+    > * {
+        flex: 1 0 50%;
+    }
+
+    .left-col {
+        border-right: solid 1px $base-color;
+
+        header {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+    }
+
+    .right-col {
+        
+        > div {
+            width: 94%;
+            margin: 8px auto;
+
+            > button {
+                display: block;
+                width: fit-content;
+                margin-left: auto;
+                border: none;
+                background-color: #4343e9;
+                color: ivory;
+                padding: 8px 26px;
+                border-radius: 4px;
+            }
+
+            > button:hover {
+                cursor: pointer;
+            }
+        }
+
+    }
+}
